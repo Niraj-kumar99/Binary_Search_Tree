@@ -62,4 +62,26 @@ public class BinarySearchOperation {
                 inorderTraversal(node.right);
         }
     }
+
+     //Method to search data in BST.
+
+     //give a value: ie ;data to find.
+
+    public Node searchNode(Node root, int value) {
+        if (root == null || root.data == value)
+            return root;
+
+        if (root.data > value)
+            return searchNode(root.left, value);
+
+        return searchNode(root.right, value);
+    }
+
+    public boolean search(int value) {
+        root = searchNode(root, value);
+        if (root != null)
+            return true;
+        else
+            return false;
+    }
 }
