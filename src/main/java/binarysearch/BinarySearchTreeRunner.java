@@ -14,13 +14,19 @@ public class BinarySearchTreeRunner {
         binary.insert(18);
         binary.insert(66);
         binary.insert(16);
-        binary.insert(6);
+        binary.insert(63);
         binary.insert(100);
         binary.insert(44);
         binary.insert(69);
         binary.insert(67);
+
         // Displaying the Binary tree.
         binary.inorderTraversal(binary.root);
+
+        // checking if 63 exists in BST.
+        boolean flag = binary.search(63);
+        System.out.println("\nElement exits: " + flag);
+
 
     }
 
